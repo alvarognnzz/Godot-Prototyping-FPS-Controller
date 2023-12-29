@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Complete FPS Controller"
+config/name="Prototyping FPS Controller"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 

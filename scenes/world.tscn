@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://8072jt7q6476"]
+[gd_scene load_steps=12 format=3 uid="uid://8072jt7q6476"]
 
 [ext_resource type="Material" uid="uid://cn1gsy15bkaff" path="res://materials/grid.tres" id="1_am6xq"]
 [ext_resource type="Texture2D" uid="uid://btcyvbptk1ly3" path="res://assets/industrial_sunset_puresky_2k.hdr" id="1_cyjcn"]
@@ -124,23 +124,6 @@ shader_parameter/uv2_offset = Vector3(0, 0, 0)
 shader_parameter/texture_albedo = ExtResource("3_qcr5r")
 shader_parameter/texture_roughness = ExtResource("3_qcr5r")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xiwx2"]
-render_priority = 0
-shader = SubResource("Shader_vot3j")
-shader_parameter/albedo = Color(0.658824, 0.384314, 0, 1)
-shader_parameter/point_size = 1.0
-shader_parameter/roughness = 0.5
-shader_parameter/metallic_texture_channel = null
-shader_parameter/specular = 0.5
-shader_parameter/metallic = 0.0
-shader_parameter/uv1_blend_sharpness = 1.0
-shader_parameter/uv1_scale = Vector3(0.5, 0.5, 0.5)
-shader_parameter/uv1_offset = Vector3(0, 0, 0)
-shader_parameter/uv2_scale = Vector3(1, 1, 1)
-shader_parameter/uv2_offset = Vector3(0, 0, 0)
-shader_parameter/texture_albedo = ExtResource("3_qcr5r")
-shader_parameter/texture_roughness = ExtResource("3_qcr5r")
-
 [node name="World" type="Node3D"]
 
 [node name="Enviroment" type="Node3D" parent="."]
@@ -177,18 +160,6 @@ use_collision = true
 polygon = PackedVector2Array(0, 0, 0, 4, 7, 0)
 depth = 4.0
 material = SubResource("ShaderMaterial_cfp7d")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 2, -5.222)
-use_collision = true
-size = Vector3(2, 0.5, 2)
-material = SubResource("ShaderMaterial_xiwx2")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Stage"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27864, 1.75546, -5.222)
-use_collision = true
-size = Vector3(2, 0.5, 2)
-material = SubResource("ShaderMaterial_xiwx2")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("4_ixq40")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
