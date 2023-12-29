@@ -90,12 +90,11 @@ _data = {
 "crouch": SubResource("Animation_idtr7")
 }
 
-[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("head", "camera", "crouching_animation", "crouching_shapecast")]
+[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("head", "camera", "crouching_animation")]
 script = ExtResource("1_cbfba")
 head = NodePath("Head")
 camera = NodePath("Head/Camera3D")
 crouching_animation = NodePath("Crouching/AnimationPlayer")
-crouching_shapecast = NodePath("Crouching/ShapeCast3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hnq1i")
