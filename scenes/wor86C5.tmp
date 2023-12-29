@@ -163,6 +163,11 @@ material = SubResource("ShaderMaterial_cfp7d")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("4_ixq40")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+WALKING_SPEED = null
+SPRINTING_SPEED = null
+CROUCHING_SPEED = null
+JUMP_VELOCITY = null
+MOUSE_SENSIBILITY = null
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
