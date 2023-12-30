@@ -8,6 +8,7 @@ Godot 4 prototyping First Person Controller based on the state pattern. Wrote on
 <p align="center">
   <img src="https://github.com/netlaunch/Prototyping-FPS-Controller/assets/154734437/e80e1224-fc42-46e3-b1b8-70f23530b0e3" />
 </p>
+
 ## Godot 4 First Person Controller meant for prototyping
 This controller acts as a foundation for testing and prototype projects. It includes a small code-based state machine. It should not be used for large projects as it may not be scalable.
 
