@@ -1,7 +1,7 @@
 # Prototyping FPS Controller
 
-![Godot](https://img.shields.io/badge/GODOT-%23B5DAF6.svg?style=for-the-badge&logo=godot-engine)
-![GDScript](https://img.shields.io/badge/GDSCRIPT-%23b5bcf6.svg?style=for-the-badge&logo=godot-engine)
+![Godot](https://img.shields.io/badge/Godot%204.2-478cbf.svg?logo=godot-engine&logoColor=white&style=for-the-badge)
+![GDScript](https://img.shields.io/badge/GDScript-478cbf.svg?logo=godot-engine&logoColor=white&style=for-the-badge)
 
 Godot 4 prototyping First Person Controller based on the state pattern. Wrote on GDScript.
 
