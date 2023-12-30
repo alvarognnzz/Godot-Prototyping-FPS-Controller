@@ -65,17 +65,17 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func state_machine() -> void:
-	if Input.get_vector("left", "right", "foward", "backward") == Vector2.ZERO and is_on_floor():
+	if Input.get_vector("left", "right", "forward", "backward") == Vector2.ZERO and is_on_floor():
 		current_state = State.IDLE
-	if Input.get_vector("left", "right", "foward", "backward") != Vector2.ZERO and is_on_floor():
+	if Input.get_vector("left", "right", "forward", "backward") != Vector2.ZERO and is_on_floor():
 		current_state = State.WALKING
 	if not is_on_floor():
 		current_state = State.JUMPING
-	if Input.get_vector("left", "right", "foward", "backward") != Vector2.ZERO and Input.is_action_pressed("sprint") and is_on_floor():
+	if Input.get_vector("left", "right", "forward", "backward") != Vector2.ZERO and Input.is_action_pressed("sprint") and is_on_floor():
 		current_state = State.SPRINTING
 
 func move(delta: float, speed: float) -> void:
-	var input_dir: Vector2 = Input.get_vector("left", "right", "foward", "backward")
+	var input_dir: Vector2 = Input.get_vector("left", "right", "forward", "backward")
 	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if is_on_floor():
 		if direction:
@@ -87,7 +87,6 @@ func move(delta: float, speed: float) -> void:
 	else:
 		velocity.x = lerp(velocity.x, direction.x * JUMP_VELOCITY, delta * 2.0)
 		velocity.z = lerp(velocity.z, direction.z * JUMP_VELOCITY, delta * 2.0)
-
 
 func headbob(time: float, freq, amp) -> Vector3:
 	var pos: Vector3 = Vector3.ZERO
