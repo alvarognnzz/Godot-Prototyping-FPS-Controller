@@ -1,4 +1,9 @@
 extends RayCast3D
 
+signal colliding
+
 func _process(delta: float) -> void:
-	Global.HEAD_RAYCAST_COLLIDING = is_colliding()
+	if is_colliding(): 
+		colliding.emit(true)
+	else:
+		colliding.emit(false)

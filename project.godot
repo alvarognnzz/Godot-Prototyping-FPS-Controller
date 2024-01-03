@@ -14,10 +14,6 @@ config/name="Prototyping FPS Controller"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
-[autoload]
-
-Global="*res://scripts/global.gd"
-
 [debug]
 
 gdscript/warnings/untyped_declaration=2
