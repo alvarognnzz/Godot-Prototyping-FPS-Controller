@@ -87,7 +87,7 @@ func move(delta: float, speed: float) -> void:
 		velocity.x = lerp(velocity.x, direction.x * JUMP_VELOCITY, delta * 2.0)
 		velocity.z = lerp(velocity.z, direction.z * JUMP_VELOCITY, delta * 2.0)
 
-func headbob(time: float, freq: float, amp: float) -> Vector3:
+func headbob(time: float, freq, amp) -> Vector3:
 	var pos: Vector3 = Vector3.ZERO
 	pos.y = sin(time * freq) * amp
 	
@@ -98,6 +98,13 @@ func headbob(time: float, freq: float, amp: float) -> Vector3:
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = SubResource("GDScript_gtmjp")
+WALKING_SPEED = null
+SPRINTING_SPEED = null
+JUMP_VELOCITY = null
+MOUSE_SENSIBILITY = null
+LERP_SPEED = null
+BOB_FREQ = null
+BOB_AMP = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_hnq1i")
@@ -113,9 +120,7 @@ collision_mask = 2
 collide_with_areas = true
 script = ExtResource("1_8x3y5")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Crosshair" type="Control" parent="CanvasLayer"]
+[node name="Crosshair" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -124,7 +129,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Crosshair"]
+[node name="CenterContainer" type="CenterContainer" parent="Crosshair"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
