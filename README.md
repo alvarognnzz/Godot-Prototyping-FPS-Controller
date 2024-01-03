@@ -13,7 +13,7 @@ Godot 4 prototyping First Person Controller based on the state pattern. Wrote on
 This controller acts as a foundation for testing and prototype projects. It includes a small code-based state machine. It should not be used for large projects as it may not be scalable.
 
 ## Features
-As a testing controller, it only includes walking and sprinting functionality. More states can be added by modifying the state machine.
+As a testing controller, it only includes walking and sprinting functionality. More states can be added by modifying the state machine. The controller also includes a dynamic crosshair that reacts to objects in the Collsion Layer 2 using raycasts.
 
 ## Download
 If you are starting a project from scratch, you can clone the repository and use the demo stage. If you already have a project and just want to download the controller, you can download it from [releases](https://github.com/netlaunch/Prototyping-FPS-Controller/releases).
